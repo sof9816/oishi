@@ -1,0 +1,28 @@
+name: oishi
+description: "A Flutter package for building configurable multi-screen applications with dynamic buttons and WebView integration."
+version: 0.0.1
+homepage: "https://github.com/sof9816/oishi"
+
+environment:
+  sdk: ^3.5.3
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  flutter_riverpod: ^2.5.1
+  webview_flutter: ^4.9.0
+  webview_flutter_android: ^3.16.9
+  webview_flutter_wkwebview: ^3.15.0
+  haptic_feedback: ^0.5.1+1
+  shared_preferences: ^2.3.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+# flutter:
+# assets:
+# - assets/images/logo.png
