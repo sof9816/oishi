@@ -1,6 +1,6 @@
 name: oishi
 description: "A Flutter package for building configurable multi-screen applications with dynamic buttons and WebView integration."
-version: 0.0.2
+version: 0.0.3
 homepage: "https://github.com/sof9816/oishi"
 
 environment:
