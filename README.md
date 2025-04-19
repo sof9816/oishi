@@ -29,7 +29,7 @@ Add the following dependency to your `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  oishi: ^1.0.0
+  oishi:
 ```
 
 Then, run `flutter pub get` to install the package.
@@ -54,53 +54,54 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Oishi(
+      logo: "assets/images/logo.png",
       screens: [
         ScreenConfig(
-          endpoint: Endpoint.home,
+          endpoint: "https://somesite.com/home",
           icon: 'assets/images/Home.png',
-          hoveredIcon: 'assets/images/HomeH.png',
-          tabTitle: "الرئيسية",
+          hoveredIcon: 'assets/images/HomeHover.png',
+          tabTitle: "Home",
           pageTitle: "",
         ),
         ScreenConfig(
-          endpoint: Endpoint.categories,
+          endpoint: "https://somesite.com/categories",
           icon: 'assets/images/Categorize.png',
-          hoveredIcon: 'assets/images/CategorizeH.png',
-          tabTitle: "الاصناف",
+          hoveredIcon: 'assets/images/CategorizeHover.png',
+          tabTitle: "Categorise",
           pageTitle: "",
         ),
         ScreenConfig(
-          endpoint: Endpoint.brands,
+          endpoint: "https://somesite.com/brands",
           icon: 'assets/images/Bag.png',
-          hoveredIcon: 'assets/images/BagH.png',
-          tabTitle: "براندات",
+          hoveredIcon: 'assets/images/BagHover.png',
+          tabTitle: "Brands",
           pageTitle: "",
         ),
         ScreenConfig(
-          endpoint: Endpoint.cart,
+          endpoint: "https://somesite.com/cart",
           icon: 'assets/images/Cart.png',
-          hoveredIcon: 'assets/images/CartH.png',
-          tabTitle: "العربة",
+          hoveredIcon: 'assets/images/CartHover.png',
+          tabTitle: "Cart",
           pageTitle: "",
         ),
         ScreenConfig(
-          endpoint: Endpoint.more,
+          endpoint: "https://somesite.com/more",
           icon: 'assets/images/Customer.png',
-          hoveredIcon: 'assets/images/CustomerH.png',
-          tabTitle: "الحساب",
+          hoveredIcon: 'assets/images/CustomerHover.png',
+          tabTitle: "Profile",
           pageTitle: "",
         ),
       ],
       buttons: [
         ButtonConfig(
-          endpoint: Endpoint.cart,
+          endpoint: "https://somesite.com/cart",
           icon: Icons.shopping_cart,
           pageTitle: 'cart',
           condition: (pageTitle) =>
               pageTitle == 'products' || pageTitle == 'search',
         ),
         ButtonConfig(
-          endpoint: Endpoint.search,
+          endpoint: "https://somesite.com/search",
           icon: Icons.search,
           pageTitle: 'search',
           condition: (pageTitle) =>
@@ -113,6 +114,10 @@ class MyApp extends StatelessWidget {
 ```
 
 ### Configuration
+
+#### Logo
+
+`Logo` is used to set the logo for all screens in the application.
 
 #### ScreenConfig
 
