@@ -43,6 +43,7 @@ class Oishi extends StatelessWidget {
         ),
       ),
       home: MainScreen(
+        logo: logo,
         screens: screens,
         buttons: buttons,
         action: action,
@@ -52,12 +53,14 @@ class Oishi extends StatelessWidget {
 }
 
 class MainScreen extends StatefulWidget {
+  final String? logo;
   final List<ScreenConfig> screens;
   final List<ButtonConfig> buttons;
   final ActionConfig? action;
 
   const MainScreen({
     super.key,
+    this.logo,
     required this.screens,
     required this.buttons,
     this.action,
@@ -93,7 +96,7 @@ class MainScreenState extends State<MainScreen>
     final index = _screenQueue.removeFirst();
 
     final webScreen = WebScreen(
-      logo: "assets/images/logo.png",
+      logo: widget.logo,
       url: widget.screens[index].endpoint,
       pageTitle: widget.screens[index].pageTitle,
       hasPageTitle: false,
